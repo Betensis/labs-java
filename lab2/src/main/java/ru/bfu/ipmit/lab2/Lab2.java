@@ -41,8 +41,15 @@ public class Lab2 {
      *
      */
     static boolean arePermutations(String firstString, String secondString) {
-        // TODO: implement this method
-        return false;
+        if (firstString.length() != secondString.length())
+            return false;
+
+        char[] firstStringChars = firstString.toCharArray();
+        char[] secondStringChars = secondString.toCharArray();
+        Arrays.sort(firstStringChars);
+        Arrays.sort(secondStringChars);
+
+        return Arrays.equals(firstStringChars, secondStringChars);
     }
 
     /**
