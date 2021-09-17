@@ -69,8 +69,14 @@ public class Lab2 {
      *
      */
     static int[][] rotateMatrix(int[][] matrix) {
-        // TODO: implement this method
-        return null;
-    }
+        int[][] rotated = new int[matrix.length][matrix.length];
 
+        for (int i = 0; i < matrix.length; ++i) {
+            for (int j = 0; j < matrix.length; ++j) {
+                rotated[i][j] = matrix[matrix.length - j - 1][i];
+            }
+        }
+
+        return rotated;
+    }
 }
