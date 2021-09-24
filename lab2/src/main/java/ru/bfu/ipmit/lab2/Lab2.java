@@ -69,6 +69,10 @@ public class Lab2 {
      *
      */
     static int[][] rotateMatrix(int[][] matrix) {
+        if (matrix.length == 0){
+            return matrix.clone();
+        }
+
         int[][] rotated = new int[matrix.length][matrix.length];
 
         for (int i = 0; i < matrix.length; ++i) {
