@@ -12,8 +12,13 @@ public class GetKSmallestNumbersTests {
         int k = 2;
 
         byte[] actualResult = Lab2.getKSmallestNumbers(array, k);
-
         byte[] expectedResult = {1, 8};
+
+        assertArrayEquals(actualResult, expectedResult);
+
+        k = 0;
+        actualResult = Lab2.getKSmallestNumbers(array, k);
+        expectedResult = new byte[]{};
         assertArrayEquals(actualResult, expectedResult);
     }
 
